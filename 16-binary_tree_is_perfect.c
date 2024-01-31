@@ -39,7 +39,7 @@ const binary_tree_t *ge(const binary_tree_t *to)
 }
 
 /**
- * is - Checksrecursively.
+ * isp - Checksrecursively.
  * @to: A pointer to the root node of the tree to check.
  * @l: Thedepthtree.
  * @lev: Levelnode.
