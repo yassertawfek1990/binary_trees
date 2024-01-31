@@ -3,8 +3,7 @@
 unsigned char isl(const binary_tree_t *nd);
 size_t d(const binary_tree_t *to);
 const binary_tree_t *ge(const binary_tree_t *to);
-int is(const binary_tree_t *to,
-		size_t l, size_t lev);
+int isp(const binary_tree_t *to, size_t l, size_t lev);
 int binary_tree_is_perfect(const binary_tree_t *tree);
 
 /**
@@ -46,13 +45,13 @@ const binary_tree_t *ge(const binary_tree_t *to)
  * @lev: Levelnode.
  * Return: Ifthtrespotherwise 0.
  */
-int is(const binary_tree_t *to, size_t l, size_t lev)
+int isp(const binary_tree_t *to, size_t l, size_t lev)
 {
 	if (isl(to))
 		return (lev == l ? 1 : 0);
 	if (to->left == NULL || to->right == NULL)
 		return (0);
-	return (is(to->left, l, lev + 1) && is(to->right, l, lev + 1));
+	return (isp(to->left, l, lev + 1) && isp(to->right, l, lev + 1));
 }
 
 /**
@@ -64,5 +63,5 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
-	return (is(tree, d(ge(tree)), 0));
+	return (isp(tree, d(ge(tree)), 0));
 }
