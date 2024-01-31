@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 
 /**
- * is_full_recursive - Checksifabinarytreeisfullrecursively.
- * @tree: Apointercheck.
+ * is - Checksifabinarytreeisfullrecursively.
+ * @to: Apointercheck.
  * Return: IftreeisnotOtherwise1.
  */
 int is(const binary_tree_t *to)
